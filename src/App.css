@@ -1,0 +1,112 @@
+/* === Global Styles === */
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: #1a1a1a; /* Dark background */
+  color: #e0e0e0; /* Light text */
+}
+
+/* === Layout === */
+.main-content {
+  padding: 20px;
+  max-width: 1200px;
+  margin: 20px auto;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: 1fr 2fr; /* Creates a 1/3 and 2/3 column layout */
+  gap: 40px; /* Space between the columns */
+  align-items: start;
+}
+
+.logo {
+  width: 500px; /* This is the number that controls the size */
+  height: auto;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+}
+/* === Ingredients Input Section === */
+.ingredients-container {
+  background-color: #242424;
+  padding: 25px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.ingredients-container h2 {
+  margin-top: 0;
+  color: #ffffff;
+}
+
+.ingredients-input {
+  width: 100%;
+  padding: 12px;
+  border-radius: 6px;
+  border: 1px solid #444;
+  background-color: #333;
+  color: #e0e0e0;
+  font-size: 16px;
+  box-sizing: border-box; /* Ensures padding doesn't affect width */
+  margin-bottom: 15px;
+}
+
+.submit-button {
+  width: 100%;
+  padding: 12px;
+  border: none;
+  border-radius: 6px;
+  background-color: #4CAF50; /* Green */
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.submit-button:disabled {
+  background-color: #555;
+  cursor: not-allowed;
+}
+
+.submit-button:hover:not(:disabled) {
+  background-color: #45a049;
+}
+
+/* === Recipe Display Section === */
+.recipe-container {
+  background-color: #242424;
+  padding: 25px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  min-height: 300px; /* Ensures a consistent height */
+}
+
+.recipe-content {
+  margin-top: 15px;
+}
+
+/* Styling for the rendered markdown from react-markdown */
+.recipe-content h1, .recipe-content h2, .recipe-content h3 {
+  color: #ffffff;
+  border-bottom: 1px solid #444;
+  padding-bottom: 5px;
+}
+
+.recipe-content ul, .recipe-content ol {
+  padding-left: 20px;
+}
+
+.recipe-content li {
+  margin-bottom: 8px;
+  line-height: 1.6;
+}
+
+.recipe-content strong {
+  color: #4CAF50; /* Highlight important words in green */
+}
